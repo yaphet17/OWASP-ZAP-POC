@@ -1,0 +1,24 @@
+name: ZAP Scan
+
+on:
+  push: 
+    branches: [ main ]
+
+jobs:
+  zap_scan:
+    runs-on: ubuntu-latest
+    name: Scan the webapplication
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Build Image
+        run: docker build -t owasp-zap-poc .
+      - name: Run Docker Container
+        run: docker run -d -p 8080:8080 sample-app
+      - name: ZAP Scan
+        uses: zaproxy/action-baseline@v0.7.0
+      - name: "Upload Report"
+        uses: actions/upload-artifact@v1
+        with:
+          name: zap-scan-report
+          path: ./script/report.html
