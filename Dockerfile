@@ -1,4 +1,5 @@
-FROM openjdk:8
+FROM openjdk:8-jdk-alpine
 EXPOSE 8080
-ADD target/owasp-zap-poc.jar owasp-zap-poc.jar
-ENTRYPOINT ["java","-jar","/owasp-zap-poc.jar"]
+VOLUME /tmp
+COPY target/*.jar app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]
