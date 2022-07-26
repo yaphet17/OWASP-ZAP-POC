@@ -14,7 +14,7 @@
     <name>owasp-zap-poc</name>
     <description>owasp-zap-poc</description>
     <properties>
-        <java.version>17</java.version>
+        <java.version>8</java.version>
     </properties>
     <dependencies>
         <dependency>
@@ -36,6 +36,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
+        <finalName>owasp-zap-poc</finalName>
     </build>
 
 </project>
