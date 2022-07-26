@@ -1,0 +1,13 @@
+//package com.yaphet.owaspzappoc;
+//
+//import org.junit.jupiter.api.Test;
+//import org.springframework.boot.test.context.SpringBootTest;
+//
+//@SpringBootTest
+//class OwaspZapPocApplicationTests {
+//
+//    @Test
+//    void contextLoads() {
+//    }
+//
+//}
