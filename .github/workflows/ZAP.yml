@@ -26,7 +26,8 @@ jobs:
         with:
           target: 'http://localhost:8080'
       - name: "Upload Report"
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
-          name: zap-scan-report
-          path: ./script/report.html
+          name: zap-scan-reports
+          path: |
+            build/reports
